@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Venture Group - Your Partner in Success</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2b8bb0;
+            --secondary: #255365;
+            --background: #225163;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .bg-brand-primary { background-color: var(--primary); }
+        .bg-brand-secondary { background-color: var(--secondary); }
+        .bg-brand-background { background-color: var(--background); }
+        .text-brand-primary { color: var(--primary); }
+        .hover-brand-primary:hover { background-color: var(--primary); }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--background) 0%, var(--secondary) 100%);
+        }
+
+        .hero-image {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .rating-card {
+            transition: transform 0.2s;
+        }
+
+        .rating-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Custom button styles */
+        .cta-button {
+            background-color: var(--primary);
+            transition: all 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                text-align: center;
+            }
+            .hero-image {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+<!-- Navigation -->
+<nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <!-- Logo -->
+                <a href="/">
+                    <img src="assets/images/logo.png" alt="CVG Logo" class="h-12 w-auto">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 ml-auto">
+                <div class="relative">
+                    <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+                        About Us
+                        <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="submenu absolute hidden bg-white shadow-lg mt-2 rounded-lg">
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Our Story</a>
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Team</a>
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Careers</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+                        Portfolio
+                        <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="submenu absolute hidden bg-white shadow-lg mt-2 rounded-lg">
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Fireworks Electric</a>
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Complete CDG</a>
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Aptive Diagnostics</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+                        Products
+                        <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="submenu absolute hidden bg-white shadow-lg mt-2 rounded-lg">
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Software Solutions</a>
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Hardware Products</a>
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Consulting Services</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+                        Solutions
+                        <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="submenu absolute hidden bg-white shadow-lg mt-2 rounded-lg">
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Business Strategy</a>
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Market Analysis</a>
+                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Financial Planning</a>
+                    </div>
+                </div>
+                <button class="cta-button text-white px-6 py-2 rounded-lg">Contact Us</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.querySelectorAll('.menu-button').forEach(button => {
+        button.addEventListener('click', function () {
+            let submenu = this.nextElementSibling;
+            let arrow = this.querySelector('svg');
+
+            document.querySelectorAll('.submenu').forEach(menu => {
+                if (menu !== submenu) menu.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.menu-button svg').forEach(svg => {
+                if (svg !== arrow) svg.classList.remove('rotate-180');
+            });
+
+            submenu.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        });
+    });
+</script>
+
+<style>
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
+</style>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="hero-section">
+                    <h1 class="text-5xl font-bold text-white mb-6">
+                        Your Partner in Success.
+                    </h1>
+                    <p class="text-lg text-white">
+                        Fast track your growth with Complete Venture Group, the financial and administrative services provider for ambitious entrepreneurs.
+                    </p>
+                </div>
+                <div class="hero-video">
+                    <video autoplay loop muted playsinline class="w-full rounded-lg shadow-2xl">
+                        <source src="assets/images/hero_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Services Section -->
+<div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Financial Services Card -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="assets/images/fin_services.png" alt="Financial Services Icon" class="w-16 mx-auto mb-4">
+                <div class="text-2xl font-bold text-brand-primary mb-2">Financial Services</div>
+                <p class="text-gray-600 text-sm">Expert financial solutions to help manage and grow your business effectively.</p>
+            </div>
+            
+            <!-- Funding Card -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="assets/images/funding.png" alt="Funding Icon" class="w-16 mx-auto mb-4">
+                <div class="text-2xl font-bold text-brand-primary mb-2">Funding</div>
+                <p class="text-gray-600 text-sm">Access to capital and financial resources tailored to your business needs.</p>
+            </div>
+            
+            <!-- Administrative Services Card -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="assets/images/gear.png" alt="Administrative Services Icon" class="w-16 mx-auto mb-4">
+                <div class="text-2xl font-bold text-brand-primary mb-2">Administrative Services</div>
+                <p class="text-gray-600 text-sm">Comprehensive admin support to streamline your operations efficiently.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // Add mobile menu functionality if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle could be added here
+        });
+    </script>
+</body>
+</html>
