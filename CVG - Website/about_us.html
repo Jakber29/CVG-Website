@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complete Venture Group - Your Family Office</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+
+</head>
+<body>
+  <!-- Header (Sticky) -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow z-50 py-2">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Adjusted height and flex alignment so the logo isn't at the bottom -->
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center">
+          <img src="assets/images/logo.png" alt="CVG Logo" class="h-12 w-auto md:h-16" />
+        </a>
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <!-- Services (Mega Menu) -->
+          <div class="relative">
+            <button id="products-button" class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              Services
+              <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Industries Dropdown -->
+          <div class="relative">
+            <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              Industries
+              <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="submenu hidden absolute bg-white shadow-lg mt-2 rounded-lg">
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Electricians</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Life Sciences</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Restaurants</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Construction</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Professional Services</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Commercial RE Mgmt.</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Residential RE Mgmt.</a>
+            </div>
+          </div>
+          <!-- About Us Dropdown -->
+          <div class="relative">
+            <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              About Us
+              <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="submenu hidden absolute bg-white shadow-lg mt-2 rounded-lg">
+              <a href="about_us.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
+              <a href="our_team.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Our Team</a>
+            </div>
+          </div>
+          <!-- Contact Us (No Dropdown) -->
+          <div class="relative">
+            <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              <a href="contact_us.html">Contact Us</a>
+            </button>
+          </div>
+          <!-- Investor Relations (No Dropdown) -->
+          <div class="relative">
+            <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              Investor Relations
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Mega Menu -->
+  <div id="products-menu">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row">
+        <!-- Left Column: Categories -->
+        <div class="md:w-1/3 border-r pr-4">
+          <ul id="products-categories">
+            <li data-target="accounting" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Accounting</li>
+            <li data-target="finance" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Finance</li>
+            <li data-target="human_resources" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Human Resources</li>
+            <li data-target="information_technology" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Information Technology</li>
+          </ul>
+        </div>
+        <!-- Right Column: Sub-Items (Card Layout) -->
+        <div id="products-submenu" class="md:w-2/3 pl-4 py-4">
+          <h2 class="text-2xl font-bold mb-4">Welcome to Services</h2>
+          <p>Select a category from the left to explore options.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- About Us Section -->
+<div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="about-us-section">
+                <h1 class="text-5xl font-bold text-gray-800 mb-6">About Complete Venture Group</h1>
+                <p class="text-lg text-gray-600">
+                    At Complete Venture Group, we are dedicated to providing top-tier financial and administrative services to ambitious entrepreneurs. Our mission is to fast track your growth by offering comprehensive solutions tailored to your unique business needs. With a team of experienced professionals, we ensure that you have the support and resources necessary to achieve your goals and drive success.
+                </p>
+            </div>
+            <div class="about-us-image">
+                <img src="assets/images/about_us.png" alt="About Us Image" class="w-full rounded-lg shadow-2xl" />
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Footer Section -->
+  <footer class="bg-brand-secondary text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Left Column -->
+      <div class="flex flex-col items-center md:items-start">
+        <img src="assets/images/CVG-LOGO-BLK.png" alt="CVG Logo" class="h-24 w-auto md:h-32 mb-4" />
+        <p class="text-sm">&copy; 2024 Complete Venture Group. All Rights Reserved.</p>
+        <p class="text-sm mt-2">
+          <a href="#" class="hover:underline">Privacy Policy</a> //
+          <a href="#" class="hover:underline">Terms &amp; Conditions</a> //
+          <a href="#" class="hover:underline">Responsible Investing Policy</a>
+        </p>
+      </div>
+      <!-- Center Column -->
+      <div class="text-left text-lg space-y-2">
+        <a href="about_us.html" class="block text-white font-bold hover:underline">About Us</a>
+        <a href="#" class="block text-white font-bold hover:underline">Industries</a>
+        <a href="contact_us.html" class="block text-white font-bold hover:underline">Contact Us</a>
+      </div>
+      <!-- Right Column -->
+      <div class="text-left text-lg space-y-2">
+        <a href="our_team.html" class="block text-white font-bold hover:underline">Our Team</a>
+        <a href="#" class="block text-white font-bold hover:underline">News</a>
+        <a href="investor_login.html" class="block text-white font-bold hover:underline">Investor Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const productsButton = document.getElementById('products-button');
+      const productsMenu = document.getElementById('products-menu');
+      const allSubmenus = document.querySelectorAll('.submenu');
+
+      // Close all dropdowns (including mega menu)
+      function closeAllMenus() {
+        // Close standard dropdown submenus
+        allSubmenus.forEach(sub => sub.classList.add('hidden'));
+        // Reset arrow icons
+        document.querySelectorAll('.menu-button svg').forEach(svg => {
+          svg.classList.remove('rotate-180');
+        });
+        // Close mega menu
+        productsMenu.classList.remove('open');
+      }
+
+      // Toggle standard dropdowns (Industries, About Us, etc.)
+      document.querySelectorAll('.menu-button').forEach(button => {
+        button.addEventListener('click', function (e) {
+          // If this button is NOT the "Services" button, handle normal submenu
+          if (!button.id.includes('products-button')) {
+            // Close the mega menu if open
+            productsMenu.classList.remove('open');
+            const submenu = this.nextElementSibling;
+            const arrow = this.querySelector('svg');
+
+            // Close all other submenus
+            allSubmenus.forEach(menu => {
+              if (menu !== submenu) menu.classList.add('hidden');
+            });
+            // Reset all arrows
+            document.querySelectorAll('.menu-button svg').forEach(svg => {
+              if (svg !== arrow) svg.classList.remove('rotate-180');
+            });
+
+            // Toggle this particular submenu
+            if (submenu && submenu.classList.contains('submenu')) {
+              submenu.classList.toggle('hidden');
+              arrow.classList.toggle('rotate-180');
+            }
+          }
+        });
+      });
+
+      // Toggle the mega menu on "Services" button click
+      productsButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        // Close all other submenus first
+        allSubmenus.forEach(sub => sub.classList.add('hidden'));
+        document.querySelectorAll('.menu-button svg').forEach(svg => {
+          if (!svg.closest('#products-button')) {
+            svg.classList.remove('rotate-180');
+          }
+        });
+        // Toggle the mega menu
+        productsMenu.classList.toggle('open');
+      });
+
+      // Mega menu content
+      const categoryItems = document.querySelectorAll('#products-categories li');
+      const submenuContainer = document.getElementById('products-submenu');
+
+      categoryItems.forEach(item => {
+        item.addEventListener('click', function () {
+          categoryItems.forEach(i => i.classList.remove('bg-gray-200'));
+          this.classList.add('bg-gray-200');
+          const target = this.getAttribute('data-target');
+
+          let content = '';
+          if (target === 'accounting') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Accounting</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Bookkeeping -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/accounting/bookkeeping.png" alt="Bookkeeping Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Bookkeeping</h3>
+                  <p class="text-gray-600 text-sm">Complete transaction management and financial record maintenance</p>
+                </div>
+                <!-- Financial Reporting -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/accounting/financial-reporting.png" alt="Financial Reporting Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Financial Reporting</h3>
+                  <p class="text-gray-600 text-sm">Comprehensive P&amp;L, balance sheet, and cash flow statements</p>
+                </div>
+                <!-- Receivables/Invoice Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/accounting/receivables.png" alt="Receivables Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Receivables/Invoice Management</h3>
+                  <p class="text-gray-600 text-sm">Streamlined invoicing and collections processes</p>
+                </div>
+                <!-- Audit Support -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/accounting/audit-support.png" alt="Audit Support Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Audit Support</h3>
+                  <p class="text-gray-600 text-sm">End-to-end assistance with internal and external audits</p>
+                </div>
+                <!-- AP and Bill Pay Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/accounting/ap.png" alt="AP Management Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">AP and Bill Pay Management</h3>
+                  <p class="text-gray-600 text-sm">Comprehensive accounts payable and payment processing</p>
+                </div>
+                <!-- Financial Planning -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/accounting/financial-planning.png" alt="Financial Planning Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Financial Planning</h3>
+                  <p class="text-gray-600 text-sm">Strategic budgeting and forecasting services</p>
+                </div>
+              </div>
+            `;
+          } else if (target === 'finance') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Finance</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Treasury Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/finance/treasury.png" alt="Treasury Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Treasury Management</h3>
+                  <p class="text-gray-600 text-sm">Cash flow optimization and banking relationship management</p>
+                </div>
+                <!-- Financial Analysis -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/finance/analysis.png" alt="Analysis Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Financial Analysis</h3>
+                  <p class="text-gray-600 text-sm">In-depth business performance analysis and reporting</p>
+                </div>
+                <!-- Risk Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/finance/risk.png" alt="Risk Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Risk Management</h3>
+                  <p class="text-gray-600 text-sm">Financial risk assessment and mitigation strategies</p>
+                </div>
+                <!-- Budgeting -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/finance/budgeting.png" alt="Budgeting Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Budgeting</h3>
+                  <p class="text-gray-600 text-sm">Comprehensive budget development and monitoring</p>
+                </div>
+                <!-- Forecasting -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/finance/forecasting.png" alt="Forecasting Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Forecasting</h3>
+                  <p class="text-gray-600 text-sm">Financial projections and scenario planning</p>
+                </div>
+                <!-- Investment Planning -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/finance/investment.png" alt="Investment Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Investment Planning</h3>
+                  <p class="text-gray-600 text-sm">Strategic investment and capital allocation</p>
+                </div>
+              </div>
+            `;
+          } else if (target === 'human_resources') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Human Resources</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Talent Acquisition -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/hr/talent.png" alt="Talent Acquisition Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Talent Acquisition</h3>
+                  <p class="text-gray-600 text-sm">Full-cycle recruiting and onboarding support</p>
+                </div>
+                <!-- Benefits Administration -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/hr/benefits.png" alt="Benefits Administration Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Benefits Administration</h3>
+                  <p class="text-gray-600 text-sm">Complete benefits management and employee support</p>
+                </div>
+                <!-- Compliance Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/hr/compliance.png" alt="Compliance Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Compliance Management</h3>
+                  <p class="text-gray-600 text-sm">HR policy and regulatory adherence</p>
+                </div>
+                <!-- Performance Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/hr/performance.png" alt="Performance Management Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Performance Management</h3>
+                  <p class="text-gray-600 text-sm">Employee evaluation and development programs</p>
+                </div>
+                <!-- Compensation Planning -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/hr/compensation.png" alt="Compensation Planning Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Compensation Planning</h3>
+                  <p class="text-gray-600 text-sm">Salary and benefits structure optimization</p>
+                </div>
+                <!-- Training & Development -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/hr/training.png" alt="Training Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Training &amp; Development</h3>
+                  <p class="text-gray-600 text-sm">Employee skill training and growth initiatives</p>
+                </div>
+              </div>
+            `;
+          } else if (target === 'information_technology') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Information Technology</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Network Administration -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/it/network.png" alt="Network Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Network Administration</h3>
+                  <p class="text-gray-600 text-sm">Network configuration and maintenance</p>
+                </div>
+                <!-- Data Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/it/data.png" alt="Data Management Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Data Management</h3>
+                  <p class="text-gray-600 text-sm">Secure data storage, backup, and analytics</p>
+                </div>
+                <!-- Software Support -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/it/software.png" alt="Software Support Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Software Support</h3>
+                  <p class="text-gray-600 text-sm">Ongoing software updates and troubleshooting</p>
+                </div>
+                <!-- Cybersecurity -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/it/cybersecurity.png" alt="Cybersecurity Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Cybersecurity</h3>
+                  <p class="text-gray-600 text-sm">Proactive security assessments and solutions</p>
+                </div>
+                <!-- Cloud Solutions -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/it/cloud.png" alt="Cloud Solutions Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Cloud Solutions</h3>
+                  <p class="text-gray-600 text-sm">Scalable hosting and infrastructure services</p>
+                </div>
+                <!-- IT Project Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <img src="assets/images/icons/it/project.png" alt="IT Project Management Icon" class="w-12 h-12 mx-auto mb-2">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">IT Project Management</h3>
+                  <p class="text-gray-600 text-sm">Planning and execution of technology initiatives</p>
+                </div>
+              </div>
+            `;
+          } else {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Services</h2>
+              <p>Please select a category.</p>
+            `;
+          }
+          submenuContainer.innerHTML = content;
+        });
+      });
+
+      // Dynamically position the mega menu below the header
+      function updateMegaMenuPosition() {
+        const header = document.querySelector('header');
+        if (header) {
+          const headerHeight = header.offsetHeight;
+          productsMenu.style.top = headerHeight + "px";
+        }
+      }
+      updateMegaMenuPosition();
+      window.addEventListener('resize', updateMegaMenuPosition);
+    });
+  </script>
+</body>
+</html>

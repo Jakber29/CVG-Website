@@ -1,223 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Venture Group - Your Partner in Success</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2b8bb0;
-            --secondary: #255365;
-            --background: #225163;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        .bg-brand-primary { background-color: var(--primary); }
-        .bg-brand-secondary { background-color: var(--secondary); }
-        .bg-brand-background { background-color: var(--background); }
-        .text-brand-primary { color: var(--primary); }
-        .hover-brand-primary:hover { background-color: var(--primary); }
-
-        .hero-gradient {
-            background: linear-gradient(135deg, var(--background) 0%, var(--secondary) 100%);
-        }
-
-        .hero-image {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .rating-card {
-            transition: transform 0.2s;
-        }
-
-        .rating-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Custom button styles */
-        .cta-button {
-            background-color: var(--primary);
-            transition: all 0.2s;
-        }
-
-        .cta-button:hover {
-            background-color: var(--secondary);
-            transform: translateY(-2px);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero-section {
-                text-align: center;
-            }
-            .hero-image {
-                margin-top: 2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complete Venture Group - Your Family Office</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
 </head>
 <body>
-    <!-- Navigation -->
-<!-- Navigation -->
-<nav class="bg-white shadow-lg">
+  <!-- Header (Sticky) -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow z-50 py-2">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between h-16">
-            <div class="flex items-center">
-                <!-- Logo -->
-                <a href="/">
-                    <img src="assets/images/logo.png" alt="CVG Logo" class="h-12 w-auto">
-                </a>
+      <!-- Adjusted height and flex alignment so the logo isn't at the bottom -->
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center">
+          <img src="assets/images/logo.png" alt="CVG Logo" class="h-12 w-auto md:h-16" />
+        </a>
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <!-- Services (Mega Menu) -->
+          <div class="relative">
+            <button id="products-button" class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              Services
+              <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Industries Dropdown -->
+          <div class="relative">
+            <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              Industries
+              <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="submenu hidden absolute bg-white shadow-lg mt-2 rounded-lg">
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Electricians</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Life Sciences</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Restaurants</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Construction</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Professional Services</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Commercial RE Mgmt.</a>
+              <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Residential RE Mgmt.</a>
             </div>
-            <div class="hidden md:flex items-center space-x-8 ml-auto">
-                <div class="relative">
-                    <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
-                        About Us
-                        <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="submenu absolute hidden bg-white shadow-lg mt-2 rounded-lg">
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Our Story</a>
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Team</a>
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Careers</a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
-                        Portfolio
-                        <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="submenu absolute hidden bg-white shadow-lg mt-2 rounded-lg">
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Fireworks Electric</a>
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Complete CDG</a>
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Aptive Diagnostics</a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
-                        Products
-                        <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="submenu absolute hidden bg-white shadow-lg mt-2 rounded-lg">
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Software Solutions</a>
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Hardware Products</a>
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Consulting Services</a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
-                        Solutions
-                        <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="submenu absolute hidden bg-white shadow-lg mt-2 rounded-lg">
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Business Strategy</a>
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Market Analysis</a>
-                        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Financial Planning</a>
-                    </div>
-                </div>
-                <button class="cta-button text-white px-6 py-2 rounded-lg">Contact Us</button>
+          </div>
+          <!-- About Us Dropdown -->
+          <div class="relative">
+            <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              About Us
+              <svg class="ml-1 w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="submenu hidden absolute bg-white shadow-lg mt-2 rounded-lg">
+              <a href="about_us.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
+              <a href="our_team.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Our Team</a>
             </div>
+          </div>
+          <!-- Contact Us (No Dropdown) -->
+          <div class="relative">
+            <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              <a href="contact_us.html">Contact Us</a>
+            </button>
+          </div>
+          <!-- Investor Relations (No Dropdown) -->
+          <div class="relative">
+            <button class="menu-button text-gray-600 hover:text-brand-primary flex items-center focus:outline-none">
+              Investor Relations
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-</nav>
+  </header>
 
-<script>
-    document.querySelectorAll('.menu-button').forEach(button => {
-        button.addEventListener('click', function () {
-            let submenu = this.nextElementSibling;
-            let arrow = this.querySelector('svg');
+  <!-- Services Mega Menu -->
+  <div id="products-menu">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row">
+        <!-- Left Column: Categories -->
+        <div class="md:w-1/3 border-r pr-4">
+          <ul id="products-categories">
+            <li data-target="executive_strategy" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Executive &amp; Strategy</li>
+            <li data-target="industry_specific" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Industry Specific</li>
+            <li data-target="back_office" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Back-Office</li>
+            <li data-target="partnerships" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Partnerships</li>
+            <li data-target="family_office" class="p-4 font-bold cursor-pointer hover:bg-gray-100">Family Office</li>
+          </ul>
+        </div>
+        <!-- Right Column: Sub-Items (Card Layout) -->
+        <div id="products-submenu" class="md:w-2/3 pl-4 py-4">
+          <h2 class="text-2xl font-bold mb-4">Welcome to Services</h2>
+          <p>Select a category from the left to explore options.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            document.querySelectorAll('.submenu').forEach(menu => {
-                if (menu !== submenu) menu.classList.add('hidden');
+  <!-- Hero Section -->
+  <div class="hero-gradient">
+    <div class="max-w-7xl mx-auto px-4 py-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="hero-section">
+          <h1 class="text-5xl font-bold text-white mb-6">Family Office Reimagined</h1>
+          <p class="text-lg text-white">
+            Fast track your growth with Complete Venture Group, the financial and administrative services provider for ambitious entrepreneurs.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="assets/images/capital.png" alt="Hero Image" class="w-full rounded-lg shadow-2xl" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section (Original Content) -->
+  <div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Financial Services Card -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="assets/icons/fin_services.png" alt="Financial Services Icon" class="w-16 mx-auto mb-4" />
+          <div class="text-2xl font-bold text-brand-primary mb-2">Financial Services</div>
+          <p class="text-gray-600 text-sm">Expert financial solutions to help manage and grow your business effectively.</p>
+        </div>
+        <!-- Funding Card -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="assets/icons/funding.png" alt="Funding Icon" class="w-16 mx-auto mb-4" />
+          <div class="text-2xl font-bold text-brand-primary mb-2">Funding</div>
+          <p class="text-gray-600 text-sm">Access to capital and financial resources tailored to your business needs.</p>
+        </div>
+        <!-- Administrative Services Card -->
+        <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="assets/icons/gear.png" alt="Administrative Services Icon" class="w-16 mx-auto mb-4" />
+          <div class="text-2xl font-bold text-brand-primary mb-2">Administrative Services</div>
+          <p class="text-gray-600 text-sm">Comprehensive admin support to streamline your operations efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-brand-secondary text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Left Column -->
+      <div class="flex flex-col items-center md:items-start">
+        <img src="assets/images/CVG-LOGO-BLK.png" alt="CVG Logo" class="h-24 w-auto md:h-32 mb-4" />
+        <p class="text-sm">&copy; 2024 Complete Venture Group. All Rights Reserved.</p>
+        <p class="text-sm mt-2">
+          <a href="#" class="hover:underline">Privacy Policy</a> //
+          <a href="#" class="hover:underline">Terms &amp; Conditions</a> //
+          <a href="#" class="hover:underline">Responsible Investing Policy</a>
+        </p>
+      </div>
+      <!-- Center Column -->
+      <div class="text-left text-lg space-y-2">
+        <a href="about_us.html" class="block text-white font-bold hover:underline">About Us</a>
+        <a href="#" class="block text-white font-bold hover:underline">Industries</a>
+        <a href="contact_us.html" class="block text-white font-bold hover:underline">Contact Us</a>
+      </div>
+      <!-- Right Column -->
+      <div class="text-left text-lg space-y-2">
+        <a href="our_team.html" class="block text-white font-bold hover:underline">Our Team</a>
+        <a href="#" class="block text-white font-bold hover:underline">News</a>
+        <a href="investor_login.html" class="block text-white font-bold hover:underline">Investor Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const productsButton = document.getElementById('products-button');
+      const productsMenu = document.getElementById('products-menu');
+      const allSubmenus = document.querySelectorAll('.submenu');
+
+      // Close all dropdowns (including mega menu)
+      function closeAllMenus() {
+        // Close standard dropdown submenus
+        allSubmenus.forEach(sub => sub.classList.add('hidden'));
+        // Reset arrow icons
+        document.querySelectorAll('.menu-button svg').forEach(svg => {
+          svg.classList.remove('rotate-180');
+        });
+        // Close mega menu
+        productsMenu.classList.remove('open');
+      }
+
+      // Toggle standard dropdowns (Industries, About Us, etc.)
+      document.querySelectorAll('.menu-button').forEach(button => {
+        button.addEventListener('click', function (e) {
+          // If this button is NOT the "Services" button, handle normal submenu
+          if (!button.id.includes('products-button')) {
+            // Close the mega menu if open
+            productsMenu.classList.remove('open');
+            const submenu = this.nextElementSibling;
+            const arrow = this.querySelector('svg');
+
+            // Close all other submenus
+            allSubmenus.forEach(menu => {
+              if (menu !== submenu) menu.classList.add('hidden');
             });
-
+            // Reset all arrows
             document.querySelectorAll('.menu-button svg').forEach(svg => {
-                if (svg !== arrow) svg.classList.remove('rotate-180');
+              if (svg !== arrow) svg.classList.remove('rotate-180');
             });
 
-            submenu.classList.toggle('hidden');
-            arrow.classList.toggle('rotate-180');
+            // Toggle this particular submenu
+            if (submenu && submenu.classList.contains('submenu')) {
+              submenu.classList.toggle('hidden');
+              arrow.classList.toggle('rotate-180');
+            }
+          }
         });
+      });
+
+      // Toggle the mega menu on "Services" button click
+      productsButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        // Close all other submenus first
+        allSubmenus.forEach(sub => sub.classList.add('hidden'));
+        document.querySelectorAll('.menu-button svg').forEach(svg => {
+          if (!svg.closest('#products-button')) {
+            svg.classList.remove('rotate-180');
+          }
+        });
+        // Toggle the mega menu
+        productsMenu.classList.toggle('open');
+      });
+
+      // Mega menu content
+      const categoryItems = document.querySelectorAll('#products-categories li');
+      const submenuContainer = document.getElementById('products-submenu');
+
+      categoryItems.forEach(item => {
+        item.addEventListener('click', function () {
+          categoryItems.forEach(i => i.classList.remove('bg-gray-200'));
+          this.classList.add('bg-gray-200');
+          const target = this.getAttribute('data-target');
+
+          let content = '';
+          if (target === 'executive_strategy') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Executive &amp; Strategy</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Corporate Strategy -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Corporate Strategy</h3>
+                  <p class="text-gray-600 text-sm">Develop and implement effective corporate strategies.</p>
+                </div>
+                <!-- Financial Planning & Budgeting -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Financial Planning &amp; Budgeting</h3>
+                  <p class="text-gray-600 text-sm">Plan financials and optimize budgeting for growth.</p>
+                </div>
+                <!-- Performance Analysis -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Performance Analysis</h3>
+                  <p class="text-gray-600 text-sm">Evaluate business performance to drive improvement.</p>
+                </div>
+                <!-- Feasibility Analyses -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">(Project/Initiative) Feasibility Analyses</h3>
+                  <p class="text-gray-600 text-sm">Assess viability of new projects and initiatives.</p>
+                </div>
+                <!-- Risk Management -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Risk Management</h3>
+                  <p class="text-gray-600 text-sm">Identify and mitigate potential business risks.</p>
+                </div>
+                <!-- Insurance Consulting & Mgmt. -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Insurance Consulting &amp; Mgmt.</h3>
+                  <p class="text-gray-600 text-sm">Expert advice on insurance coverage and management.</p>
+                </div>
+                <!-- Tech Stack -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Tech Stack</h3>
+                  <p class="text-gray-600 text-sm">Advise on technology infrastructure and digital solutions.</p>
+                </div>
+              </div>
+            `;
+          } else if (target === 'industry_specific') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Industry Specific</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Estimating & Quoting -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Estimating &amp; Quoting</h3>
+                  <p class="text-gray-600 text-sm">Deliver accurate cost estimates and competitive quotes.</p>
+                </div>
+                <!-- Procurement & Vendor Mgmt. -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Procurement &amp; Vendor Mgmt.</h3>
+                  <p class="text-gray-600 text-sm">Streamline procurement processes and vendor relations.</p>
+                </div>
+                <!-- Supply Chain & Logistics -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Supply Chain &amp; Logistics</h3>
+                  <p class="text-gray-600 text-sm">Optimize supply chain and logistics operations.</p>
+                </div>
+              </div>
+            `;
+          } else if (target === 'back_office') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Back-Office</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Accounting -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Accounting</h3>
+                  <p class="text-gray-600 text-sm">Manage financial records and reporting.</p>
+                </div>
+                <!-- Bookkeeping -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Bookkeeping</h3>
+                  <p class="text-gray-600 text-sm">Maintain accurate and timely bookkeeping.</p>
+                </div>
+                <!-- Human Resources -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Human Resources (Select &amp; Full)</h3>
+                  <p class="text-gray-600 text-sm">Provide tailored HR solutions for every need.</p>
+                </div>
+                <!-- IT Coverage -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">IT Coverage</h3>
+                  <p class="text-gray-600 text-sm">Ensure robust IT support and services.</p>
+                </div>
+                <!-- Customer Support -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Customer Support</h3>
+                  <p class="text-gray-600 text-sm">Enhance customer satisfaction with dedicated support.</p>
+                </div>
+                <!-- Data Entry & Mgmt. -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Data Entry &amp; Mgmt.</h3>
+                  <p class="text-gray-600 text-sm">Accurate data entry and management services.</p>
+                </div>
+                <!-- Utility Mgmt. -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Utility Mgmt.</h3>
+                  <p class="text-gray-600 text-sm">Oversee utility services and cost efficiency.</p>
+                </div>
+                <!-- Marketing & SEO -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Marketing &amp; SEO</h3>
+                  <p class="text-gray-600 text-sm">Boost brand presence with strategic marketing and SEO.</p>
+                </div>
+              </div>
+            `;
+          } else if (target === 'partnerships') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Partnerships</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Legal -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Legal</h3>
+                  <p class="text-gray-600 text-sm">Access legal expertise for business matters.</p>
+                </div>
+                <!-- Tax -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Tax</h3>
+                  <p class="text-gray-600 text-sm">Optimize tax strategies and compliance.</p>
+                </div>
+                <!-- Financing -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Financing</h3>
+                  <p class="text-gray-600 text-sm">Secure financing options to fuel growth.</p>
+                </div>
+              </div>
+            `;
+          } else if (target === 'family_office') {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Family Office</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Complete Financial Picture -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Complete Financial Picture</h3>
+                  <p class="text-gray-600 text-sm">Comprehensive financial management and reporting.</p>
+                </div>
+                <!-- Wealth & Investment Mgmt. -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Wealth &amp; Investment Mgmt.</h3>
+                  <p class="text-gray-600 text-sm">Strategic wealth management and investment planning.</p>
+                </div>
+                <!-- Advisory Services -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Advisory Services</h3>
+                  <p class="text-gray-600 text-sm">Expert advisory services for personalized guidance.</p>
+                </div>
+                <!-- Tax Planning & Compliance -->
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                  <h3 class="text-brand-primary font-bold text-lg mb-1">Tax Planning &amp; Compliance</h3>
+                  <p class="text-gray-600 text-sm">Optimize tax planning while ensuring compliance.</p>
+                </div>
+              </div>
+            `;
+          } else {
+            content = `
+              <h2 class="text-2xl font-bold mb-4">Services</h2>
+              <p>Please select a category.</p>
+            `;
+          }
+          submenuContainer.innerHTML = content;
+        });
+      });
+
+      // Dynamically position the mega menu below the header
+      function updateMegaMenuPosition() {
+        const header = document.querySelector('header');
+        if (header) {
+          const headerHeight = header.offsetHeight;
+          productsMenu.style.top = headerHeight + "px";
+        }
+      }
+      updateMegaMenuPosition();
+      window.addEventListener('resize', updateMegaMenuPosition);
     });
-</script>
-
-<style>
-    .rotate-180 {
-        transform: rotate(180deg);
-    }
-</style>
-
-    <!-- Hero Section -->
-    <div class="hero-gradient">
-        <div class="max-w-7xl mx-auto px-4 py-20">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="hero-section">
-                    <h1 class="text-5xl font-bold text-white mb-6">
-                        Your Partner in Success.
-                    </h1>
-                    <p class="text-lg text-white">
-                        Fast track your growth with Complete Venture Group, the financial and administrative services provider for ambitious entrepreneurs.
-                    </p>
-                </div>
-                <div class="hero-video">
-                    <video autoplay loop muted playsinline class="w-full rounded-lg shadow-2xl">
-                        <source src="assets/images/hero_video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- Services Section -->
-<div class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Financial Services Card -->
-            <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="assets/images/fin_services.png" alt="Financial Services Icon" class="w-16 mx-auto mb-4">
-                <div class="text-2xl font-bold text-brand-primary mb-2">Financial Services</div>
-                <p class="text-gray-600 text-sm">Expert financial solutions to help manage and grow your business effectively.</p>
-            </div>
-            
-            <!-- Funding Card -->
-            <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="assets/images/funding.png" alt="Funding Icon" class="w-16 mx-auto mb-4">
-                <div class="text-2xl font-bold text-brand-primary mb-2">Funding</div>
-                <p class="text-gray-600 text-sm">Access to capital and financial resources tailored to your business needs.</p>
-            </div>
-            
-            <!-- Administrative Services Card -->
-            <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="assets/images/gear.png" alt="Administrative Services Icon" class="w-16 mx-auto mb-4">
-                <div class="text-2xl font-bold text-brand-primary mb-2">Administrative Services</div>
-                <p class="text-gray-600 text-sm">Comprehensive admin support to streamline your operations efficiently.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <script>
-        // Add mobile menu functionality if needed
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle could be added here
-        });
-    </script>
+  </script>
 </body>
 </html>
